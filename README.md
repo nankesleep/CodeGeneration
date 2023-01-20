@@ -1,0 +1,5 @@
+SQL文件中为sql语句，需先创建cg_generation数据库，再执行sql语句
+
+project_manage 3.0文件中为前端工程
+
+codeGeneration文件中为后端工程
