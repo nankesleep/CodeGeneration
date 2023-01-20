@@ -29,7 +29,7 @@
 <script>
 
 import { login } from '../network/index'
-import { getToken } from '@/utils/auth'
+import { setToken } from '@/utils/auth'
 
 export default {
     data() {
@@ -58,7 +58,7 @@ export default {
                 if (res.code === 200 && res.data) {
                     this.$message.success("登录成功");
                     localStorage.setItem("ms_username", this.param.username);
-                    getToken();
+                    setToken(res.data.token);
                     this.$router.push("/Homepage");
                     this.$store.commit('initIdentity', '系统管理员')
                 } else {
